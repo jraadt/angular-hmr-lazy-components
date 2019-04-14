@@ -21,7 +21,7 @@ export class CComponent  {
   ngOnInit() {
     setTimeout(() => {
       this.loading = false;
-      this.content = 'C';
+      this.content = 'C1';
       //uncomment this next line to see this component dynamically reload
       //this.content = 'C1'
     },3000)
