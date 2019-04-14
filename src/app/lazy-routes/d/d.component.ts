@@ -3,7 +3,7 @@ import { ComponentSelectors } from "../../component-selectors";
 import { DynamicComponentsService } from "../../dynamic-components.service";
 
 @Component({
-  selector: "my-c",
+  selector: "my-d",
   template: `
     <div class="lazy-component">
       <ng-container *ngIf="loading">
@@ -12,18 +12,18 @@ import { DynamicComponentsService } from "../../dynamic-components.service";
       {{ content }}
     </div>
   `,
-  styleUrls: ["../../lazy.component.css", "./c.component.css"]
+  styleUrls: ["../../lazy.component.css", "./d.component.css"]
 })
-export class CComponent {
+export class DComponent {
   loading: boolean = true;
   content: string;
 
   ngOnInit() {
     setTimeout(() => {
       this.loading = false;
-      this.content = "C13";
+      this.content = "D1";
       //uncomment this next line to see this component dynamically reload
-      //this.content = 'C1'
+      //this.content = 'D1'
     }, 3000);
   }
 }
